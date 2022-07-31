@@ -46,6 +46,26 @@ align-items: center;
     text-decoration: none;
 
 }
+/*comiezo a decorar pagina contactos*/
+.fondo{
+    background-image: linear-gradient(to bottom right,rgb(139, 167, 139) 10%, rgb(248, 224, 194) ) ;
+}
+input{
+    transition: all 2s;
+}
+input:focus{
+    font-size: 25px;
+    color: rgb(21, 39, 21);
+    text-transform: uppercase;
+}
+input::placeholder{
+    color: black;
+}
+/*fin pagina contacto*/
+
+
+
+
 /* 
  .tituloContenedor{
     display: flex;
@@ -79,15 +99,14 @@ main{
      }
 
 .flexIndex{
-    /* height: 600px; */
+   
     width: 100%;
     display: flex;
     flex-wrap: wrap;
  
 }
 .nleft{
-    /* display: flex; */
-    /* height: 600px; */
+   
     width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
  
@@ -98,8 +117,7 @@ main{
 }
 
 .nright{
-    /* flex-wrap: wrap;
-    display: flex; */
+   
     background-image: url(../multimedia/familia2.jpg);
     height: 600px;
     width: 100%;
@@ -123,10 +141,19 @@ p{
 .menu{
     margin: 20px;
     margin-bottom: 10px;
-    /* border-right:10px;  */
+
     text-decoration:underline;
     font-weight: 150px;
     font-size: 30px;
+}
+.tmenu{
+    transition: all 2s;
+}
+.tmenu:hover{
+    font-family: cursive;
+    font-size: 30px;
+    color: rgb(101, 184, 101);
+    transition: all 2s;
 }
 
 .barra{
@@ -239,6 +266,7 @@ h2{
     width: auto;
     background-color: cornsilk;
     display: grid;
+
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(8, 200px);
     grid-gap:10px;
