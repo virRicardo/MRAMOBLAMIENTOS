@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto:ital@1 & pantalla=intercambiar');
+@import url('https://fonts.googleapis.com/css2? family= Open+Sans & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Abril+Fatface & display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sanz-serif;
+    margin: 0;
+    background-color: rgb(248, 224, 194);
+
+}
+.headerLogo{
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(139, 167, 139);
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 15px;
+}
+.logo{
+display: flex;
+align-items: center;
+
+
+}
+.logo img{
+    height: 100px;
+   margin-right: 10px;
+}
+.nombreEmpresa{
+    color: rgb(245, 245, 239);
+    font-size: 30px;
+    font-family:'Abril Fatface', cursiva, sans-serif;
+    text-align: center;
+
+    font-style: italic;
+    
+}
+.index{
+    font-size: 25px;
+    text-decoration: none;
+
+}
+/* 
+ .tituloContenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;   
+   
+} */
+
+/* .tituloPortada{
+    width: 100%;
+    border: 3px solid #000;
+}  */
+
+    
+
+main{
+    font-size: 30px;
+    padding:3%;
+    margin: 5px;
+    margin-top: 10px;
+   }
+
+.titulo2{
+    text-align: center;
+    font-style: normal;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    margin-bottom: 30px;
+     }
+
+.flexIndex{
+    /* height: 600px; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.nleft{
+    /* display: flex; */
+    /* height: 600px; */
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+.txtIndex{
+    font-size: 25px;
+    padding-right: 5%;
+}
+
+.nright{
+    /* flex-wrap: wrap;
+    display: flex; */
+    background-image: url(../multimedia/familia2.jpg);
+    height: 600px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    
+}
+p{
+    text-align: justify;
+    font-family:'Open Sans', sans-serif ;
+    font-size:25px ;
+    font-style: normal;
+    width: auto;
+    height: auto;
+    padding: 1%;
+    
+     }
+
+.menu{
+    margin: 20px;
+    margin-bottom: 10px;
+    /* border-right:10px;  */
+    text-decoration:underline;
+    font-weight: 150px;
+    font-size: 30px;
+}
+
+.barra{
+    color: brown;
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+
+.barra ul li a{
+    color:rgb(141, 87, 87);
+}
+ul li a:hover{
+    color: brown;
+}
+
+
+.copy{
+    text-align: center;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style:italic  ;
+}
+
+.redes{
+   display:flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   list-style: none;
+   margin: 15px;
+}
+
+h2{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 100px;
+    margin:10px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+
+}
+/* seccion promocines */
+.sectionPromo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;   
+}
+
+.contenedorPromo1{
+    width: 100%;
+    border: 2px solid #000;
+     margin: 1%;
+    
+} 
+.contenedorPromo2{
+    width: 100%;
+    border: 2px solid #000;
+     margin: 1%;
+    
+} 
+.contenedorPromo3{
+    width: 100%;
+    border: 2px solid #000;
+     margin: 1%;
+    
+} 
+.promo{
+  
+    text-align: justify;
+    font-family:'Open Sans', sans-serif ;
+    font-size:15px ;
+    font-style: normal;
+    padding: 5%;
+}
+    
+
+
+.imagenTarjeta{ 
+   
+    width: 100%;
+    padding: 5%;
+}
+  
+/* fin seccion promociones */
+
+
+/* seccion faq */
+.faq {
+    list-style: disc;
+    width: auto;
+    height: auto;
+    margin:20px;
+    padding: 20px;
+    border:10px;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.faqli{
+    font-family:'Open Sans', sans-serif ;
+    text-decoration: underline;
+    font-style: italic;
+}
+ /* seccion grid */
+.contenedor{
+    min-height: 1200px;
+    width: auto;
+    background-color: cornsilk;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 200px);
+    grid-gap:10px;
+    padding:10px;
+}
+ 
+ .item{
+    border:5px solid #000;
+    border-radius: 5px;
+    transition: all(0.7s);    
+ }
+
+ .item:hover{
+    transform: scale(1.05);
+    transition: all(0.7s);
+ }
+.item1{
+    background-image: url(../multimedia/escritorio\ \(2\).jpg);
+    box-sizing: cover;
+    background-position: center;
+}
+.item2{
+    background-image: url(../multimedia/dormitorio1.jpg);
+    box-sizing: cover;
+    background-position: center;
+  }
+.item3{
+    background-image: url(../multimedia/cama.jpg);
+    box-sizing: cover;
+    background-position: center;
+}
+.item4{
+    background-image: url(../multimedia/cocina.jpg);
+    box-sizing: cover;
+    background-position: center;
+}
+.item5{
+    background-image: url(../multimedia/comoda.jpg);
+    box-sizing: cover;
+    background-position: center;
+}
+.item6{
+    background-image: url(../multimedia//cuna.jpg);
+    box-sizing: cover;
+    background-position: center;
+}
+
+
+
+.slider{
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+    margin: 50px auto 0;
+   
+
+}
+
+.slider .galeria {
+    display: flex;
+    animation: slide 15s infinite alternate ease-in-out;
+    width: 900px;
+  
+
+}
+
+ .slider .galeria li{
+    width: 700px;
+    list-style: none;
+   
+ }
+
+ .slider .galeria img{
+    width: auto;
+    height: 500px;
+    margin-bottom: 20px;
+    border-bottom: 20px;
+    padding-bottom: 15px;
+    
+
+ }
+
+ @keyframes slide{
+    0%{ margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{ margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{ margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{ margin-left: -300%;}
+    100%{margin-left: -300%;}
+
+   100%{ margin-left: -400%;}
+    120%{margin-left: -400%;}
+
+    125%{ margin-left: -500%;}
+    140%{margin-left: -500%;}
+ }
+
+@media only screen and (min-width:360px){
+   
+.contenedor{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+    
+@media only screen and (min-width:600) and (max-width:767px) {
+    
+  
+     
+       
+ 
+.contenedorPromo1,.contenedorPromo2,.contenedorPromo3{
+    width: 100%;
+}
+.nleft,.nright{
+    width: 50%;
+} 
+.contenedorPromo{
+    width: 50%;
+}
+
+.contenedor{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .item1{
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .item2{
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+    .item3{
+        grid-column:2/3 ;
+        grid-row: 2/3;
+    }
+    .item4{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .item5{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .item6{
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+   
+    
+}
+
+
+@media only screen and (min-width:768px) {
+    
+    .sectionPromo{
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .nleft,.nright{
+        width: 50%;
+    } 
+    
+    .contenedor{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        grid-template-areas: 
+                    "img1 img2 img2"
+                    "img1 img3 img4"
+                    "img5 img5 img6";
+    }
+.item1{
+    grid-area: img1;
+}
+.item2{
+    grid-area: img2;
+}
+.item3{
+    grid-area: img3;
+}
+.item4{
+    grid-area: img4;
+}
+.item5{
+    grid-area: img5;
+}
+.item6{
+    grid-area: img6;
+}
+}
+@media (max-width:360px){
+    .logo{
+      display: list-item;
+     list-style: none;
+    }
+}
+
+
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
