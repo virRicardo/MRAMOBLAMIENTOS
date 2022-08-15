@@ -34,6 +34,9 @@ body main {
   padding: 3%;
   margin: 5px;
   margin-top: 10px;
+  /*revisar transicion contactos*/
+  /*fin contacto*/
+  /*le di clase a promociones a las fotos para colocarle un borde pero no lo agarra, revisar*/
 }
 body main p {
   font-family: "Poppins", sans-serif;
@@ -60,12 +63,23 @@ body main .nright {
   background-repeat: no-repeat;
   background-position: center;
 }
-body main input:focus {
+body main .input {
+  transition: all 2s;
+  width: 100%;
+}
+body main .input:focus {
   font-size: 25px;
   text-transform: uppercase;
+  font-weight: 500;
 }
-body main input::placeholder {
+body main .input::placeholder {
   color: rgb(138, 8, 8);
+}
+body main .textarea {
+  width: 100%;
+}
+body main .select {
+  width: 100%;
 }
 body main .nav-link {
   transition: all 2s;
@@ -75,19 +89,25 @@ body main .nav-link:hover {
   font-size: 30px;
   transition: all 2s;
 }
+body main .imgp {
+  border: 5px solid #000;
+}
 body footer .copy {
   text-align: center;
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: italic;
+  /*sacar linea del footer en pag promociones de referencia*/
 }
 body footer .copy .redes {
-  display: flex;
   justify-content: space-evenly;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   flex-wrap: wrap;
   list-style: none;
   margin: 15px;
+}
+body footer .copy .f {
+  display: block;
 }
 
 /* seccion faq */
@@ -110,7 +130,7 @@ body footer .copy .redes {
 
 /* seccion grid */
 .contenedor {
-  min-height: 1200px;
+  height: auto;
   width: auto;
   background-color: cornsilk;
   display: grid;
@@ -170,11 +190,13 @@ body footer .copy .redes {
 @media only screen and (min-width: 360px) {
   .contenedor {
     grid-template-columns: 1fr 1fr;
+    height: auto;
   }
 }
 @media only screen and (min-width: 600) and (max-width: 767px) {
   .contenedorPromo1, .contenedorPromo2, .contenedorPromo3 {
     width: 100%;
+    height: auto;
   }
   .nleft, .nright {
     width: 50%;
@@ -184,6 +206,7 @@ body footer .copy .redes {
   }
   .contenedor {
     grid-template-columns: repeat(3, 1fr);
+    height: auto;
   }
   .item1 {
     grid-column: 1/2;
@@ -220,6 +243,7 @@ body footer .copy .redes {
     width: 50%;
   }
   .contenedor {
+    height: auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 200px);
     grid-template-areas: "img1 img2 img2" "img1 img3 img4" "img5 img5 img6";
