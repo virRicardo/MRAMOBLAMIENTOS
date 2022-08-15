@@ -196,11 +196,13 @@ body footer .copy .f {
 @media only screen and (min-width: 360px) {
   .contenedor {
     grid-template-columns: 1fr 1fr;
+    height: auto;
   }
 }
 @media only screen and (min-width: 600) and (max-width: 767px) {
   .contenedorPromo1, .contenedorPromo2, .contenedorPromo3 {
     width: 100%;
+    height: auto;
   }
   .nleft, .nright {
     width: 50%;
@@ -210,6 +212,7 @@ body footer .copy .f {
   }
   .contenedor {
     grid-template-columns: repeat(3, 1fr);
+    height: auto;
   }
   .item1 {
     grid-column: 1/2;
@@ -246,6 +249,7 @@ body footer .copy .f {
     width: 50%;
   }
   .contenedor {
+    height: auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 200px);
     grid-template-areas: "img1 img2 img2" "img1 img3 img4" "img5 img5 img6";

@@ -201,6 +201,7 @@ footer{
 
 .contenedor{
         grid-template-columns: 1fr 1fr;
+        height: auto;
     }
 }
     
@@ -208,6 +209,7 @@ footer{
 
 .contenedorPromo1,.contenedorPromo2,.contenedorPromo3{
     width: 100%;
+    height: auto;
 }
 .nleft,.nright{
     width: 50%;
@@ -218,6 +220,7 @@ footer{
 
 .contenedor{
         grid-template-columns: repeat(3, 1fr);
+        height: auto;
     }
     .item1{
         grid-column: 1/2;
@@ -259,6 +262,7 @@ footer{
     } 
     
     .contenedor{
+        height: auto;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 200px);
         grid-template-areas: 
