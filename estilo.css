@@ -29,33 +29,35 @@ body header .navbar .navbar-brand {
   font-size: 35px;
   font-family: "Secular One", sans-serif;
 }
-body main {
+
+main {
   font-size: 25px;
   padding: 3%;
   margin: 5px;
   margin-top: 10px;
+}
+main p {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+main p .flexIndex {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   /*revisar transicion contactos*/
   /*fin contacto*/
   /*le di clase a promociones a las fotos para colocarle un borde pero no lo agarra, revisar*/
 }
-body main p {
-  font-family: "Poppins", sans-serif;
-  font-size: 25px;
-}
-body main .flexIndex {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-body main .flexIndex .nleft {
+main p .flexIndex .nleft {
   width: 100%;
   font-family: "Poppins", sans-serif;
 }
-body main .flexIndex .txtIndex {
+main p .flexIndex .nleft .txtIndex {
   font-size: 25px;
   padding-right: 5%;
 }
-body main .nright {
+main p .flexIndex .nleft .nright {
   background-image: url(../multimedia/familia2.jpg);
   height: 600px;
   width: 100%;
@@ -63,56 +65,57 @@ body main .nright {
   background-repeat: no-repeat;
   background-position: center;
 }
-body main .input {
+main p .flexIndex .input {
   transition: all 2s;
   width: 100%;
+  text-transform: uppercase;
 }
-body main .input:focus {
+main p .flexIndex .input .input:focus {
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 500;
 }
-body main .input::-moz-placeholder {
+main p .flexIndex .input .input::-moz-placeholder {
   color: rgb(138, 8, 8);
 }
-body main .input:-ms-input-placeholder {
+main p .flexIndex .input .input:-ms-input-placeholder {
   color: rgb(138, 8, 8);
 }
-body main .input::placeholder {
+main p .flexIndex .input .input::placeholder {
   color: rgb(138, 8, 8);
 }
-body main .textarea {
+main p .flexIndex .textarea {
   width: 100%;
 }
-body main .select {
+main p .flexIndex .select {
   width: 100%;
 }
-body main .nav-link {
+main p .flexIndex .nav-link {
   transition: all 2s;
 }
-body main .nav-link:hover {
+main p .flexIndex .nav-link:hover {
   font-family: cursive;
   font-size: 30px;
   transition: all 2s;
 }
-body main .imgp {
+main p .flexIndex .imgp {
   border: 5px solid #000;
 }
-body footer .copy {
+main footer .copy {
   text-align: center;
   font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: italic;
   /*sacar linea del footer en pag promociones de referencia*/
 }
-body footer .copy .redes {
+main footer .copy .redes {
   justify-content: space-evenly;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   flex-wrap: wrap;
   list-style: none;
   margin: 15px;
 }
-body footer .copy .f {
+main footer .copy .f {
   display: block;
 }
 
@@ -271,11 +274,5 @@ body footer .copy .f {
   }
   .item6 {
     grid-area: img6;
-  }
-}
-@media (max-width: 360px) {
-  .logo {
-    display: list-item;
-    list-style: none;
   }
 }/*# sourceMappingURL=estilo.css.map */
