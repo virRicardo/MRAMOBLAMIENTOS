@@ -12,6 +12,14 @@ $fontFamily_nav: 'Secular One', sans-serif;
 $color_body: rgb(194, 192, 192);
 $color_navbar: rgb(139, 167, 139);
 
+
+$fontMaps: (
+    45px: fontFamily_h1,
+    25px: fontFamily_p,
+    25px: fontFamily_fo,
+    35px: fontFamily_nav
+);
+
 * {
     margin: 0;
     padding: 0;
@@ -23,24 +31,34 @@ body {
 
     header {
         h1 {
-            font-family: $fontFamily_h1;
-            text-align: center;
-            font-size: 45px;
-            font-style: italic;
-            text-decoration: underline;
+
+            @each $sizes,
+            $fonts in $fontMaps {
+                .h1-#{$fontFamily_h1} {
+                    font-family: $fontFamily_h1;
+                    text-align: center;
+                    font-size: $sizes;
+                    font-style: italic;
+                    text-decoration: underline;
+                }
+            }
         }
 
-        .navbar {
-            background-color: $color_navbar;
-            text-shadow: 1px 1px 5px #000;
-            font-family: $fontFamily_nav;
-
-            .navbar-brand {
-                font-size: 35px;
+        @each $size,
+        $fonts in $fontMaps {
+            .navbar-#{$fontFamily_nav} {
+                background-color: $color_navbar;
+                text-shadow: 1px 1px 5px #000;
                 font-family: $fontFamily_nav;
+
+                .navbar-brand {
+                    font-size: $size;
+                    font-family: $fontFamily_nav;
+                }
             }
         }
     }
+}
 
     main {
         font-size: 25px;
@@ -48,7 +66,7 @@ body {
         margin: 5px;
         margin-top: 10px;
 
-        /* seccion grid */
+    /* seccion grid */
         .contenedor {
             height: auto;
             width: auto;
@@ -58,280 +76,166 @@ body {
             grid-template-rows: repeat(8, 200px);
             grid-gap: 10px;
             padding: 10px;
-        }
+            }
 
         .item {
             border: 5px solid #000;
             border-radius: 5px;
             transition: all(0.7s);
-        }
-
-        .item:hover {
-            transform: scale(1.05);
-            transition: all(0.7s);
-        }
-
-        .item1 {
-            background-image: url(../multimedia/escritorio\ \(2\).jpg);
-            box-sizing: cover;
-            background-position: center;
-        }
-
-        .item2 {
-            background-image: url(../multimedia/dormitorio1.jpg);
-            box-sizing: cover;
-            background-position: center;
-        }
-
-        .item3 {
-            background-image: url(../multimedia/cama.jpg);
-            box-sizing: cover;
-            background-position: center;
-        }
-
-        .item4 {
-            background-image: url(../multimedia/cocina.jpg);
-            box-sizing: cover;
-            background-position: center;
-        }
-
-        .item5 {
-            background-image: url(../multimedia/comoda.jpg);
-            box-sizing: cover;
-            background-position: center;
-        }
-
-        .item6 {
-            background-image: url(../multimedia//cuna.jpg);
-            box-sizing: cover;
-            background-position: center;
-        }
-
-        /* seccion faq */
-
-            .card {
-                font-family: $fontFamily_p;
-                font-family: $fontFamily_h1;
             }
 
-            .btn {
-                background-color: $color_navbar;
-                font-family: cursive;
-                color: #000;
-                text-decoration: underline;
-                font-style: italic;
-                font-size: 30px;
-                border-radius: 10px;
+            .item:hover {
+                transform: scale(1.05);
+                transition: all(0.7s);
+                }
+
+            .item1 {
+                background-image: url(../multimedia/escritorio\ \(2\).jpg);
+                box-sizing: cover;
+                background-position: center;
+                }
+
+            .item2 {
+                background-image: url(../multimedia/dormitorio1.jpg);
+                box-sizing: cover;
+                background-position: center;
+                }
+
+            .item3 {
+                background-image: url(../multimedia/cama.jpg);
+                box-sizing: cover;
+                background-position: center;
+                }
+
+            .item4 {
+                background-image: url(../multimedia/cocina.jpg);
+                box-sizing: cover;
+                background-position: center;
+                }
+
+            .item5 {
+                background-image: url(../multimedia/comoda.jpg);
+                box-sizing: cover;
+                background-position: center;
+                }
+
+            .item6 {
+                background-image: url(../multimedia//cuna.jpg);
+                box-sizing: cover;
+                background-position: center;
+                }
+    /* seccion faq */
+        .card {
+            font-family: $fontFamily_p;
+            font-family: $fontFamily_h1;
             }
-        }
+
+        .btn {
+            background-color: $color_navbar;
+            font-family: cursive;
+            color: #000;
+            text-decoration: underline;
+            font-style: italic;
+            font-size: 30px;
+            border-radius: 10px;
+            }
 
         .card-body {
             font-family: $fontFamily_p;
             font-size: 25px;
-        }
-
-        // .btn {
-        //     background-color: $color_navbar;
-        //     font-family: cursive;
-        //     color: #000;
-        //     text-decoration: underline;
-        //     font-style: italic;
-        //     font-size: 30px;
-        //     border-radius: 10px;
-        // }
-
-
-        // .card {
-        //     font-family: $fontFamily_p;
-        //     font-family: $fontFamily_h1;
-        //     .card-header{
-        //         background-color: blue;
-        //     }
-        // }
+            }
 
         p {
             font-family: $fontFamily_p;
             font-size: 25px;
-
-            .flexIndex {
-                width: 50%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
+            }
+        .flexIndex {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
 
                 .nleft {
                     width: 100%;
                     font-family: $fontFamily_p;
-
-                    .txtIndex {
-                        font-size: 25px;
-                        padding-right: 5%;
+                }
+                .txtIndex {
+                    font-size: 25px;
+                    padding-right: 5%;
                     }
 
-                    .nright {
-                        background-image: url(../multimedia/familia2.jpg);
-                        height: 600px;
-                        width: 100%;
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                    }
-
-                }
-
-                /*revisar transicion contactos*/
-                .input {
-                    transition: all (2s);
-                    width: 100%;
-                    text-transform: uppercase;
-                }
-                    .item:hover {
-                        transform: scale(1.05);
-                        transition: all(0.7s);
-                    }
-
-                    .input:focus {
-                        font-size: 25px;
-                        text-transform: uppercase;
-                        font-weight: 500%;
-                    }
-
-                    .input::placeholder {
-                        color: rgb(138, 8, 8);
-                    }
-                }
-                
-                .textarea {
-                    width: 100%;
-                }
-
-                .select {
-                    @extend .textarea;
-                }
-
-                /*fin contacto*/
-                .nav-link {
-                    transition: all 2s;
-                }
-
-                .nav-link:hover {
-                    font-family: cursive;
-                    font-size: 30px;
-                    transition: all 2s;
-                }
-
-                /*le di clase a promociones a las fotos para colocarle un borde pero no lo agarra, revisar*/
-                .imgp {
-                    border: 5px solid #000;
-                }
+        .nright {
+            background-image: url(../multimedia/familia2.jpg);
+            height: 600px;
+            width: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             }
         }
 
-    footer {
-            // $redes: (
-            //     instagram: red,
-            //     facebook: green,
-            //     send-mail: blue,
-            //     whatsapp: brown
-            // );
-            // @each $red, $color in $redes {
-            //     .redes --# {$red} {
-            //         background-color: $color;
-            //     }
-            // }
-        $estilos:(
-            tAlign: center,
-            fSize: 25px,
-            fFamily: $fontFamily_fo,
-            fStyle: italic
-            );
-        div .copy{
-            font-size: map-get($estilos, fSize);
-            text-align: map-get($estilos, tAlign);
-            font-style: map-get($estilos, fStyle);
-            font-family: $fontFamily_fo;
-            }
-            // .copy {
-            //     text-align: center;
-            //     font-size: 25px;
-            //     font-family: $fontFamily_fo;
-            //     font-style: italic;
+        .input {
+            transition: all (2s);
+            width: 100%;
+            text-transform: uppercase;
+        }
 
-        .redes {
-                justify-content: space-evenly;
-                font-family: $fontFamily_fo;
-                flex-wrap: wrap;
-                list-style: none;
-                margin: 15px;
+            .item:hover {
+                transform: scale(1.05);
+                transition: all(0.7s);
                 }
 
-                /*sacar linea del footer en pag promociones de referencia*/
-        .f {
-            display: block;
+            .input:focus {
+                font-size: 25px;
+                text-transform: uppercase;
+                font-weight: 500%;
+                }
+
+            .input::placeholder {
+                color: rgb(138, 8, 8);
+                }
+
+        .textarea {
+            width: 100%;
             }
+
+        .select {
+            @extend .textarea;
+            }
+    /*fin contacto*/
+        .nav-link {
+            transition: all 2s;
+            }
+
+            .nav-link:hover {
+                font-family: cursive;
+                font-size: 30px;
+                transition: all 2s;
+                }
+    }   
+
+
+footer {
+    $estilos: (tAlign: center,
+        fSize: 25px,
+        fFamily: $fontFamily_fo,
+        fStyle: italic);
+
+    div .copy {
+        font-size: map-get($estilos, fSize);
+        text-align: map-get($estilos, tAlign);
+        font-style: map-get($estilos, fStyle);
+        font-family: $fontFamily_fo;
         }
-    
 
-
-// /* seccion grid */
-// .contenedor {
-//     height: auto;
-//     width: auto;
-//     background-color: cornsilk;
-//     display: grid;
-//     grid-template-columns: repeat(1, 1fr);
-//     grid-template-rows: repeat(8, 200px);
-//     grid-gap: 10px;
-//     padding: 10px;
-// }
-
-// .item {
-//     border: 5px solid #000;
-//     border-radius: 5px;
-//     transition: all(0.7s);
-// }
-
-// .item:hover {
-//     transform: scale(1.05);
-//     transition: all(0.7s);
-// }
-
-// .item1 {
-//     background-image: url(../multimedia/escritorio\ \(2\).jpg);
-//     box-sizing: cover;
-//     background-position: center;
-// }
-
-// .item2 {
-//     background-image: url(../multimedia/dormitorio1.jpg);
-//     box-sizing: cover;
-//     background-position: center;
-// }
-
-// .item3 {
-//     background-image: url(../multimedia/cama.jpg);
-//     box-sizing: cover;
-//     background-position: center;
-// }
-
-// .item4 {
-//     background-image: url(../multimedia/cocina.jpg);
-//     box-sizing: cover;
-//     background-position: center;
-// }
-
-// .item5 {
-//     background-image: url(../multimedia/comoda.jpg);
-//     box-sizing: cover;
-//     background-position: center;
-// }
-
-// .item6 {
-//     background-image: url(../multimedia//cuna.jpg);
-//     box-sizing: cover;
-//     background-position: center;
-// }
-
+    .redes {
+        justify-content: space-evenly;
+        font-family: $fontFamily_fo;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 15px;
+        }
+    }
 
 @media only screen and (min-width:360px) {
 
@@ -443,4 +347,3 @@ body {
         grid-area: img6;
     }
 }
-
