@@ -13,20 +13,18 @@
 body {
   background-color: rgb(194, 192, 192);
 }
-body header h1 {
+
+header h1 {
+  font-size: 45px;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  font-size: 45px;
   font-style: italic;
   text-decoration: underline;
 }
-body header .navbar {
+header .navbar {
+  font-size: 16px;
   background-color: rgb(139, 167, 139);
   text-shadow: 1px 1px 5px #000;
-  font-family: "Secular One", sans-serif;
-}
-body header .navbar .navbar-brand {
-  font-size: 35px;
   font-family: "Secular One", sans-serif;
 }
 
@@ -35,179 +33,166 @@ main {
   padding: 3%;
   margin: 5px;
   margin-top: 10px;
+  /* seccion grid */
 }
-main p {
+main .contenedor {
+  height: auto;
+  width: auto;
+  background-color: rgb(194, 192, 192);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(8, 200px);
+  grid-gap: 10px;
+  padding: 10px;
+  /* seccion faq */
+  /*fin contacto*/
+}
+main .contenedor .item {
+  border: 5px solid #000;
+  border-radius: 5px;
+  transition: all(0.7s);
+}
+main .contenedor .item .item:hover {
+  transform: scale(1.05);
+  transition: all(0.7s);
+}
+main .contenedor .item .item1 {
+  background-image: url();
+  box-sizing: cover;
+  background-position: center;
+}
+main .contenedor .item .item2 {
+  background-image: url(../multimedia/dormitorio1.jpg);
+  box-sizing: cover;
+  background-position: center;
+}
+main .contenedor .item .item3 {
+  background-image: url(../multimedia/cama.jpg);
+  box-sizing: cover;
+  background-position: center;
+}
+main .contenedor .item .item4 {
+  background-image: url(../multimedia/cocina.jpg);
+  box-sizing: cover;
+  background-position: center;
+}
+main .contenedor .item .item5 {
+  background-image: url(../multimedia/comoda.jpg);
+  box-sizing: cover;
+  background-position: center;
+}
+main .contenedor .item .item6 {
+  background-image: url(../multimedia//cuna.jpg);
+  box-sizing: cover;
+  background-position: center;
+}
+main .contenedor .card {
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+main .contenedor .btn {
+  background-color: rgb(139, 167, 139);
+  font-family: cursive;
+  color: #000;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 30px;
+  border-radius: 10px;
+}
+main .contenedor .card-body {
   font-family: "Poppins", sans-serif;
   font-size: 25px;
 }
-main p .flexIndex {
-  width: 50%;
+main .contenedor p {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+}
+main .contenedor .flexIndex {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /*revisar transicion contactos*/
-  /*fin contacto*/
-  /*le di clase a promociones a las fotos para colocarle un borde pero no lo agarra, revisar*/
 }
-main p .flexIndex .nleft {
-  width: 100%;
+main .contenedor .flexIndex .nleft {
+  width: 50%;
   font-family: "Poppins", sans-serif;
 }
-main p .flexIndex .nleft .txtIndex {
+main .contenedor .flexIndex .nleft .txtIndex {
   font-size: 25px;
   padding-right: 5%;
 }
-main p .flexIndex .nleft .nright {
+main .contenedor .flexIndex .nright {
   background-image: url(../multimedia/familia2.jpg);
   height: 600px;
-  width: 100%;
+  width: 50%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-main p .flexIndex .input {
+main .contenedor .input {
   transition: all 2s;
   width: 100%;
   text-transform: uppercase;
 }
-main p .flexIndex .input .input:focus {
+main .contenedor .item:hover {
+  transform: scale(1.05);
+  transition: all(0.7s);
+}
+main .contenedor .input:focus {
   font-size: 25px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 500%;
 }
-main p .flexIndex .input .input::-moz-placeholder {
+main .contenedor .input::-moz-placeholder {
   color: rgb(138, 8, 8);
 }
-main p .flexIndex .input .input:-ms-input-placeholder {
+main .contenedor .input:-ms-input-placeholder {
   color: rgb(138, 8, 8);
 }
-main p .flexIndex .input .input::placeholder {
+main .contenedor .input::placeholder {
   color: rgb(138, 8, 8);
 }
-main p .flexIndex .textarea {
+main .contenedor .textarea, main .contenedor .select {
   width: 100%;
 }
-main p .flexIndex .select {
-  width: 100%;
-}
-main p .flexIndex .nav-link {
+main .contenedor .nav-link {
   transition: all 2s;
 }
-main p .flexIndex .nav-link:hover {
+main .contenedor .nav-link:hover {
   font-family: cursive;
   font-size: 30px;
   transition: all 2s;
 }
-main p .flexIndex .imgp {
-  border: 5px solid #000;
-}
-main footer .copy {
-  text-align: center;
+
+footer .copy {
   font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
   font-style: italic;
-  /*sacar linea del footer en pag promociones de referencia*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-main footer .copy .redes {
+footer div .redes {
+  display: flex;
   justify-content: space-evenly;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   flex-wrap: wrap;
   list-style: none;
   margin: 15px;
 }
-main footer .copy .f {
-  display: block;
-}
-
-/* seccion faq */
-.card-body {
-  font-family: "Poppins", sans-serif;
-  font-size: 25px;
-}
-
-.btn {
-  color: #000;
-  text-decoration: underline;
-  font-style: italic;
-  font-size: 30px;
-}
-
-.card {
-  font-family: "Poppins", sans-serif;
-  font-family: "Roboto", sans-serif;
-}
-
-/* seccion grid */
-.contenedor {
-  height: auto;
-  width: auto;
-  background-color: cornsilk;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(8, 200px);
-  grid-gap: 10px;
-  padding: 10px;
-}
-
-.item {
-  border: 5px solid #000;
-  border-radius: 5px;
-  transition: all(0.7s);
-}
-
-.item:hover {
-  transform: scale(1.05);
-  transition: all(0.7s);
-}
-
-.item1 {
-  background-image: url(../multimedia/escritorio\ \(2\).jpg);
-  box-sizing: cover;
-  background-position: center;
-}
-
-.item2 {
-  background-image: url(../multimedia/dormitorio1.jpg);
-  box-sizing: cover;
-  background-position: center;
-}
-
-.item3 {
-  background-image: url(../multimedia/cama.jpg);
-  box-sizing: cover;
-  background-position: center;
-}
-
-.item4 {
-  background-image: url(../multimedia/cocina.jpg);
-  box-sizing: cover;
-  background-position: center;
-}
-
-.item5 {
-  background-image: url(../multimedia/comoda.jpg);
-  box-sizing: cover;
-  background-position: center;
-}
-
-.item6 {
-  background-image: url(../multimedia//cuna.jpg);
-  box-sizing: cover;
-  background-position: center;
-}
 
 @media only screen and (min-width: 360px) {
   .contenedor {
     grid-template-columns: 1fr 1fr;
-    height: auto;
   }
 }
 @media only screen and (min-width: 600) and (max-width: 767px) {
-  .contenedorPromo1, .contenedorPromo2, .contenedorPromo3 {
+  .contenedorPromo1,
+.contenedorPromo2,
+.contenedorPromo3 {
     width: 100%;
     height: auto;
   }
-  .nleft, .nright {
+  .nleft,
+.nright {
     width: 50%;
   }
   .contenedorPromo {
@@ -248,7 +233,8 @@ main footer .copy .f {
     width: 100%;
     flex-wrap: nowrap;
   }
-  .nleft, .nright {
+  .nleft,
+.nright {
     width: 50%;
   }
   .contenedor {

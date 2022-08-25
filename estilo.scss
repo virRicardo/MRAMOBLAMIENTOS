@@ -14,10 +14,17 @@ $color_navbar: rgb(139, 167, 139);
 
 
 $fontMaps: (
-    45px: fontFamily_h1,
-    25px: fontFamily_p,
-    25px: fontFamily_fo,
-    35px: fontFamily_nav
+    h1: 45px, 
+    parrafo: 25px,
+    footer: 25px,
+    nav: 16px
+);
+
+$estilos: (
+    tAlign: center,
+    fSize: 25px,
+    fFamily: $fontFamily_fo,
+    fStyle: italic
 );
 
 * {
@@ -28,61 +35,44 @@ $fontMaps: (
 
 body {
     background-color: $color_body;
-
-    header {
-        h1 {
-
-            @each $sizes,
-            $fonts in $fontMaps {
-                .h1-#{$fontFamily_h1} {
-                    font-family: $fontFamily_h1;
-                    text-align: center;
-                    font-size: $sizes;
-                    font-style: italic;
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        @each $size,
-        $fonts in $fontMaps {
-            .navbar-#{$fontFamily_nav} {
-                background-color: $color_navbar;
-                text-shadow: 1px 1px 5px #000;
-                font-family: $fontFamily_nav;
-
-                .navbar-brand {
-                    font-size: $size;
-                    font-family: $fontFamily_nav;
-                }
-            }
-        }
-    }
 }
+header {
+    h1 {
+        font-size: map-get($fontMaps, h1);
+        font-family: $fontFamily_h1;
+        text-align: center;
+        font-style: italic;
+        text-decoration: underline;
+        }
+    .navbar{
+        font-size: map-get($fontMaps , nav );
+        background-color: $color_navbar;
+        text-shadow: 1px 1px 5px #000;
+        font-family: $fontFamily_nav;
+        }                 
+}
+    
 
-    main {
-        font-size: 25px;
-        padding: 3%;
-        margin: 5px;
-        margin-top: 10px;
+main {
+    font-size: 25px;
+    padding: 3%;
+    margin: 5px;
+    margin-top: 10px;
 
     /* seccion grid */
-        .contenedor {
-            height: auto;
-            width: auto;
-            background-color: $color_body;
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(8, 200px);
-            grid-gap: 10px;
-            padding: 10px;
-            }
-
+    .contenedor {
+        height: auto;
+        width: auto;
+        background-color: $color_body;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 200px);
+        grid-gap: 10px;
+        padding: 10px;
         .item {
             border: 5px solid #000;
             border-radius: 5px;
             transition: all(0.7s);
-            }
 
             .item:hover {
                 transform: scale(1.05);
@@ -124,124 +114,123 @@ body {
                 box-sizing: cover;
                 background-position: center;
                 }
+        }
     /* seccion faq */
         .card {
-            font-family: $fontFamily_p;
-            font-family: $fontFamily_h1;
-            }
+        font-family: $fontFamily_p;
+        font-family: $fontFamily_h1;
+        }
 
         .btn {
-            background-color: $color_navbar;
-            font-family: cursive;
-            color: #000;
-            text-decoration: underline;
-            font-style: italic;
-            font-size: 30px;
-            border-radius: 10px;
-            }
+        background-color: $color_navbar;
+        font-family: cursive;
+        color: #000;
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 30px;
+        border-radius: 10px;
+        }
 
         .card-body {
-            font-family: $fontFamily_p;
-            font-size: 25px;
-            }
+        font-family: $fontFamily_p;
+        font-size: 25px;
+        }
 
-        p {
-            font-family: $fontFamily_p;
-            font-size: 25px;
-            }
-        .flexIndex {
+    p {
+        font-family: $fontFamily_p;
+        font-size: 25px;
+        }
+
+    .flexIndex {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .nleft {
             width: 50%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-
-                .nleft {
-                    width: 100%;
-                    font-family: $fontFamily_p;
+            font-family: $fontFamily_p;
+            .txtIndex {
+                font-size: 25px;
+                padding-right: 5%;
                 }
-                .txtIndex {
-                    font-size: 25px;
-                    padding-right: 5%;
-                    }
-
-        .nright {
-            background-image: url(../multimedia/familia2.jpg);
+            }
+            .nright {
+            background-image: url(./multimedia/familia2.jpg);
             height: 600px;
-            width: 100%;
+            width: 50%;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
             }
         }
-
-        .input {
-            transition: all (2s);
-            width: 100%;
-            text-transform: uppercase;
+    }    
+    .input {
+        transition: all (2s);
+        width: 100%;
+        text-transform: uppercase;
         }
 
-            .item:hover {
-                transform: scale(1.05);
-                transition: all(0.7s);
-                }
-
-            .input:focus {
-                font-size: 25px;
-                text-transform: uppercase;
-                font-weight: 500%;
-                }
-
-            .input::placeholder {
-                color: rgb(138, 8, 8);
-                }
-
-        .textarea {
-            width: 100%;
+        .item:hover {
+            transform: scale(1.05);
+            transition: all(0.7s);
             }
 
-        .select {
-            @extend .textarea;
+        .input:focus {
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 500%;
             }
+
+        .input::placeholder {
+            color: rgb(138, 8, 8);
+            }
+
+    .textarea {
+        width: 100%;
+        }
+
+    .select {
+        @extend .textarea;
+        }
     /*fin contacto*/
-        .nav-link {
+    .nav-link {
+        transition: all 2s;
+        }
+
+        .nav-link:hover {
+            font-family: cursive;
+            font-size: 30px;
             transition: all 2s;
             }
-
-            .nav-link:hover {
-                font-family: cursive;
-                font-size: 30px;
-                transition: all 2s;
-                }
-    }   
-
+        }
+    
 
 footer {
-    $estilos: (tAlign: center,
-        fSize: 25px,
-        fFamily: $fontFamily_fo,
-        fStyle: italic);
-
-    div .copy {
+    .copy {
         font-size: map-get($estilos, fSize);
         text-align: map-get($estilos, tAlign);
         font-style: map-get($estilos, fStyle);
         font-family: $fontFamily_fo;
-        }
-
-    .redes {
-        justify-content: space-evenly;
-        font-family: $fontFamily_fo;
-        flex-wrap: wrap;
-        list-style: none;
-        margin: 15px;
+    }
+    div {
+        
+        .redes {
+            display: flex;
+            justify-content: space-evenly;
+            font-family: $fontFamily_fo;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 15px;
         }
     }
+}
 
 @media only screen and (min-width:360px) {
 
     .contenedor {
         grid-template-columns: 1fr 1fr;
-        height: auto;
+        // height: auto;
     }
 }
 
