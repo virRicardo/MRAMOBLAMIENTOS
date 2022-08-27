@@ -33,7 +33,25 @@ main {
   padding: 3%;
   margin: 5px;
   margin-top: 10px;
+  /* seccion faq */
   /* seccion grid */
+}
+main .card {
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+main .btn {
+  background-color: rgb(139, 167, 139);
+  font-family: cursive;
+  color: #000;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 30px;
+  border-radius: 10px;
+}
+main .card-body {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
 }
 main .contenedor {
   height: auto;
@@ -44,8 +62,6 @@ main .contenedor {
   grid-template-rows: repeat(8, 200px);
   grid-gap: 10px;
   padding: 10px;
-  /* seccion faq */
-  /*fin contacto*/
 }
 main .contenedor .item {
   border: 5px solid #000;
@@ -57,108 +73,101 @@ main .contenedor .item .item:hover {
   transition: all(0.7s);
 }
 main .contenedor .item .item1 {
-  background-image: url();
+  background-image: url(./multimedia/escritorio\ \(2\).jpg);
   box-sizing: cover;
   background-position: center;
 }
 main .contenedor .item .item2 {
-  background-image: url(../multimedia/dormitorio1.jpg);
+  background-image: url(./multimedia/dormitorio1.jpg);
   box-sizing: cover;
   background-position: center;
 }
 main .contenedor .item .item3 {
-  background-image: url(../multimedia/cama.jpg);
+  background-image: url(./multimedia/cama.jpg);
   box-sizing: cover;
   background-position: center;
 }
 main .contenedor .item .item4 {
-  background-image: url(../multimedia/cocina.jpg);
+  background-image: url(./multimedia/cocina.jpg);
   box-sizing: cover;
   background-position: center;
 }
 main .contenedor .item .item5 {
-  background-image: url(../multimedia/comoda.jpg);
+  background-image: url(./multimedia/comoda.jpg);
   box-sizing: cover;
   background-position: center;
 }
 main .contenedor .item .item6 {
-  background-image: url(../multimedia//cuna.jpg);
+  background-image: url(./multimedia//cuna.jpg);
   box-sizing: cover;
   background-position: center;
 }
-main .contenedor .card {
-  font-family: "Poppins", sans-serif;
-  font-family: "Roboto", sans-serif;
-}
-main .contenedor .btn {
-  background-color: rgb(139, 167, 139);
-  font-family: cursive;
-  color: #000;
-  text-decoration: underline;
-  font-style: italic;
-  font-size: 30px;
-  border-radius: 10px;
-}
-main .contenedor .card-body {
+main p {
   font-family: "Poppins", sans-serif;
   font-size: 25px;
 }
-main .contenedor p {
-  font-family: "Poppins", sans-serif;
-  font-size: 25px;
-}
-main .contenedor .flexIndex {
+main .flexIndex {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-main .contenedor .flexIndex .nleft {
+main .flexIndex .nleft {
   width: 50%;
   font-family: "Poppins", sans-serif;
 }
-main .contenedor .flexIndex .nleft .txtIndex {
+main .flexIndex .nleft .txtIndex {
   font-size: 25px;
   padding-right: 5%;
 }
-main .contenedor .flexIndex .nright {
-  background-image: url(../multimedia/familia2.jpg);
+main .flexIndex .nright {
+  background-image: url(./multimedia/familia2.jpg);
   height: 600px;
   width: 50%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-main .contenedor .input {
+
+.input {
   transition: all 2s;
   width: 100%;
   text-transform: uppercase;
 }
-main .contenedor .item:hover {
+
+.item:hover {
   transform: scale(1.05);
   transition: all(0.7s);
 }
-main .contenedor .input:focus {
+
+.input:focus {
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 500%;
 }
-main .contenedor .input::-moz-placeholder {
+
+.input::-moz-placeholder {
   color: rgb(138, 8, 8);
 }
-main .contenedor .input:-ms-input-placeholder {
+
+.input:-ms-input-placeholder {
   color: rgb(138, 8, 8);
 }
-main .contenedor .input::placeholder {
+
+.input::placeholder {
   color: rgb(138, 8, 8);
 }
-main .contenedor .textarea, main .contenedor .select {
+
+.textarea, .select {
   width: 100%;
 }
-main .contenedor .nav-link {
+
+/*fin contacto*/
+.nav-link {
   transition: all 2s;
 }
-main .contenedor .nav-link:hover {
+
+.nav-link:hover {
   font-family: cursive;
   font-size: 30px;
   transition: all 2s;

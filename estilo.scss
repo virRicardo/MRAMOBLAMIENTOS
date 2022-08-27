@@ -59,6 +59,27 @@ main {
     margin: 5px;
     margin-top: 10px;
 
+    /* seccion faq */
+    .card {
+        font-family: $fontFamily_p;
+        font-family: $fontFamily_h1;
+        }
+
+        .btn {
+        background-color: $color_navbar;
+        font-family: cursive;
+        color: #000;
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 30px;
+        border-radius: 10px;
+        }
+
+        .card-body {
+        font-family: $fontFamily_p;
+        font-size: 25px;
+        }
+    
     /* seccion grid */
     .contenedor {
         height: auto;
@@ -80,62 +101,43 @@ main {
                 }
 
             .item1 {
-                background-image: url(../multimedia/escritorio\ \(2\).jpg);
+                background-image: url(./multimedia/escritorio\ \(2\).jpg);
                 box-sizing: cover;
                 background-position: center;
                 }
 
             .item2 {
-                background-image: url(../multimedia/dormitorio1.jpg);
+                background-image: url(./multimedia/dormitorio1.jpg);
                 box-sizing: cover;
                 background-position: center;
                 }
 
             .item3 {
-                background-image: url(../multimedia/cama.jpg);
+                background-image: url(./multimedia/cama.jpg);
                 box-sizing: cover;
                 background-position: center;
                 }
 
             .item4 {
-                background-image: url(../multimedia/cocina.jpg);
+                background-image: url(./multimedia/cocina.jpg);
                 box-sizing: cover;
                 background-position: center;
                 }
 
             .item5 {
-                background-image: url(../multimedia/comoda.jpg);
+                background-image: url(./multimedia/comoda.jpg);
                 box-sizing: cover;
                 background-position: center;
                 }
 
             .item6 {
-                background-image: url(../multimedia//cuna.jpg);
+                background-image: url(./multimedia//cuna.jpg);
                 box-sizing: cover;
                 background-position: center;
                 }
         }
-    /* seccion faq */
-        .card {
-        font-family: $fontFamily_p;
-        font-family: $fontFamily_h1;
-        }
-
-        .btn {
-        background-color: $color_navbar;
-        font-family: cursive;
-        color: #000;
-        text-decoration: underline;
-        font-style: italic;
-        font-size: 30px;
-        border-radius: 10px;
-        }
-
-        .card-body {
-        font-family: $fontFamily_p;
-        font-size: 25px;
-        }
-
+    }
+    
     p {
         font-family: $fontFamily_p;
         font-size: 25px;
@@ -203,7 +205,7 @@ main {
             font-size: 30px;
             transition: all 2s;
             }
-        }
+        
     
 
 footer {
